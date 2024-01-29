@@ -1,0 +1,4 @@
+root = true
+
+[frontend] # 对 frontend 生效
+indent_size = 2 # 使用2个空格缩进
