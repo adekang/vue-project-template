@@ -1,10 +1,10 @@
 <script setup>
-import {requestLoginApi} from "@/services/index.js";
+import { onMounted } from 'vue'
+import { requestLoginApi } from '@/services/index.js'
 
 onMounted(() => {
   requestLoginApi()
 })
-
 </script>
 
 <template>

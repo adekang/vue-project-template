@@ -1,9 +1,8 @@
-import request from "@/services/request/index.js";
+import request from '@/services/request/index.js'
 
-
-export const requestLoginApi = (data) => {
-    return request.post({
-        url: 'login',
-        data
-    })
+export function requestLoginApi(data) {
+  return request.post({
+    url: 'login',
+    data,
+  })
 }
