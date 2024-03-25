@@ -38,5 +38,17 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    server: {
+      proxy: {
+        [env.VITE_APP_BASE_API]: {
+          target: env.VITE_API_BASE_URL,
+          changeOrigin: true,
+          ws: false,
+          // 将前缀api替换为空字符串
+          rewrite: path =>
+            path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`), ''),
+        },
+      },
+    },
   }
 })
