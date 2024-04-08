@@ -1,8 +1,8 @@
 import request from '@/services/request/index.js'
 
-export function requestLoginApi(data) {
+export function requestPostApi(data) {
   return request.post({
-    url: 'login',
+    url: '/hi',
     data,
   })
 }

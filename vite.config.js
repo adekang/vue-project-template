@@ -5,6 +5,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
@@ -22,10 +25,14 @@ export default defineConfig(({ mode }) => {
       },
     },
     css: {
+      /* postcss tailwindcss 配置 */
+      postcss: {
+        plugins: [tailwindcss(), autoprefixer()],
+      },
       /* CSS 预处理器 */
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "src/assets/styles/var.scss";',
+          additionalData: '@import "src/assets/styles/var.css";',
         },
       },
     },

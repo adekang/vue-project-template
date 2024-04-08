@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
+import './main.css'
 import 'normalize.css'
-import './style.scss'
 import App from './App.vue'
 import router from './routers/index.js'
 import pinia from '@/stores/index.js'

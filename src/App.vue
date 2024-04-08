@@ -8,8 +8,7 @@
   </div>
 </template>
 
-<style lang='scss' scoped>
+<style  scoped>
 .mist-app {
-  // code
 }
 </style>

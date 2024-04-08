@@ -1,18 +1,29 @@
 <script setup>
-import { onMounted } from 'vue'
-import { requestLoginApi } from '@/services/index.js'
+import { requestPostApi } from '@/services/index.js'
 
-onMounted(() => {
-  requestLoginApi()
-})
+async function handleClick() {
+  console.log('click')
+  await requestPostApi({
+    fzsid: 626,
+  })
+}
 </script>
 
 <template>
-  <el-row>
-    <el-button>Default</el-button>
-  </el-row>
+  <main class="flex justify-center items-center flex-col px-[20px] gap-4">
+    <div class="text-xl text-sky-500">
+      欢迎使用 vue-template
+    </div>
+    <p class="text-gray-500 text-sm">
+      adekang
+    </p>
+
+    <button class="flex w-400 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" @click="handleClick">
+      按钮
+    </button>
+  </main>
 </template>
 
-<style scoped lang="sass">
+<style scoped>
 
 </style>
