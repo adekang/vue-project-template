@@ -26,15 +26,15 @@ export default defineConfig(({ mode }) => {
     },
     css: {
       /* postcss tailwindcss 配置 */
-      postcss: {
-        plugins: [tailwindcss(), autoprefixer()],
-      },
+      // postcss: {
+      //   plugins: [tailwindcss(), autoprefixer()],
+      // },
       /* CSS 预处理器 */
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "src/assets/styles/var.css";',
-        },
-      },
+      // preprocessorOptions: {
+      //   scss: {
+      //     additionalData: '@import "src/assets/styles/var.css";',
+      //   },
+      // },
     },
     build: {
       minify: 'terser', // 启用 terser 压缩
